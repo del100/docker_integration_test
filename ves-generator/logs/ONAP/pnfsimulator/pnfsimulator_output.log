@@ -1,0 +1,51 @@
+2023-02-22 10:20:59.017  INFO 14 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$27c3d914] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-22 10:20:59.200  INFO 14 --- [main] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2023-02-22 10:20:59.302  INFO 14 --- [main] c.c.c.ConfigServicePropertySourceLocator : Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2023-02-22 10:20:59.303  WARN 14 --- [main] c.c.c.ConfigServicePropertySourceLocator : Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+2023-02-22 10:20:59.306  INFO 14 --- [main] o.o.i.s.nfsimulator.vesclient.Main       : No active profile set, falling back to default profiles: default
+2023-02-22 10:21:00.042  INFO 14 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2023-02-22 10:21:00.112  INFO 14 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65ms. Found 3 repository interfaces.
+2023-02-22 10:21:00.323  INFO 14 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=60638185-e196-34c2-a17a-ddaf600bdcfd
+2023-02-22 10:21:00.393  INFO 14 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$27c3d914] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-22 10:21:00.622  INFO 14 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5000 (http)
+2023-02-22 10:21:00.755  INFO 14 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1428 ms
+2023-02-22 10:21:00.819  INFO 14 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2023-02-22 10:21:00.820  INFO 14 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'watcherTaskExecutor'
+2023-02-22 10:21:01.082  INFO 14 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[mongo:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2023-02-22 10:21:01.082  INFO 14 --- [main] org.mongodb.driver.cluster               : Adding discovered server mongo:27017 to client view of cluster
+2023-02-22 10:21:01.148  INFO 14 --- [cluster-ClusterId{value='63f5ec8dcfb1a2000e2b4536', description='null'}-mongo:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1}] to mongo:27017
+2023-02-22 10:21:01.154  INFO 14 --- [cluster-ClusterId{value='63f5ec8dcfb1a2000e2b4536', description='null'}-mongo:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=mongo:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[6, 0, 4]}, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=3149522}
+2023-02-22 10:21:01.155  INFO 14 --- [cluster-ClusterId{value='63f5ec8dcfb1a2000e2b4536', description='null'}-mongo:27017] org.mongodb.driver.cluster               : Discovered cluster type of STANDALONE
+2023-02-22 10:21:01.463  INFO 14 --- [main] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2}] to mongo:27017
+2023-02-22 10:21:01.534  INFO 14 --- [main] o.o.i.s.n.v.f.WatcherEventProcessor      : DB record modified for template: notification.json
+2023-02-22 10:21:01.543  INFO 14 --- [main] o.o.i.s.n.v.f.WatcherEventProcessor      : DB record modified for template: cmNotification.json
+2023-02-22 10:21:01.556  INFO 14 --- [main] o.o.i.s.n.v.f.WatcherEventProcessor      : DB record modified for template: measurement.json
+2023-02-22 10:21:01.569  INFO 14 --- [main] o.o.i.s.n.v.f.WatcherEventProcessor      : DB record modified for template: registration.json
+2023-02-22 10:21:01.580  INFO 14 --- [main] o.o.i.s.n.v.f.WatcherEventProcessor      : DB record modified for template: notificationHttpServer.json
+2023-02-22 10:21:01.673  INFO 14 --- [main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2023-02-22 10:21:01.675  INFO 14 --- [main] org.quartz.simpl.SimpleThreadPool        : Job execution threads will use class loader of thread: main
+2023-02-22 10:21:01.685  INFO 14 --- [main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2023-02-22 10:21:01.686  INFO 14 --- [main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.2.1 created.
+2023-02-22 10:21:01.687  INFO 14 --- [main] org.quartz.simpl.RAMJobStore             : RAMJobStore initialized.
+2023-02-22 10:21:01.688  INFO 14 --- [main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.2.1) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2023-02-22 10:21:01.689  INFO 14 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2023-02-22 10:21:01.689  INFO 14 --- [main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.2.1
+2023-02-22 10:21:01.689  INFO 14 --- [main] org.quartz.core.QuartzScheduler          : Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2023-02-22 10:21:02.104  INFO 14 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2023-02-22 10:21:02.517  INFO 14 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-02-22 10:21:02.530  INFO 14 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-02-22 10:21:02.566  INFO 14 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-02-22 10:21:02.801  INFO 14 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5000 (http) with context path ''
+2023-02-22 10:21:02.804  INFO 14 --- [main] o.o.i.s.nfsimulator.vesclient.Main       : Started Main in 4.401 seconds (JVM running for 4.868)
+2023-02-22 10:22:26.164  INFO 14 --- [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-22 10:22:26.170  INFO 14 --- [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2023-02-22 10:22:26.267  INFO 14 --- [http-nio-5000-exec-1] o.o.i.s.n.v.rest.SimulatorController     : Trying to send one-time event directly to VES Collector
+2023-02-22 10:22:26.384  INFO 14 --- [http-nio-5000-exec-1] o.o.i.s.n.v.s.c.HttpClientAdapterImpl    : sending request using address: http://ves-listener:8080/eventListener/v1
+2023-02-22 10:22:27.045  INFO 14 --- [http-nio-5000-exec-1] o.o.i.s.n.v.s.c.HttpClientAdapterImpl    : Message sent, ves response code: HTTP/1.1 202 

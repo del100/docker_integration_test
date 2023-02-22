@@ -1,0 +1,10 @@
+FROM nexus3.onap.org:10001/onap/org.onap.integration.nfsimulator.vesclient
+
+ENV USE_CERTIFICATE_FOR_AUTHORIZATION=false
+
+COPY ./logs /var/log
+COPY ./templates /app/templates
+COPY ./store /app/store
+COPY ./properties/application.properties /app/application.properties
+
+EXPOSE 5000

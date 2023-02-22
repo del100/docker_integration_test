@@ -1,0 +1,10 @@
+FROM mongo
+
+ENV MONGO_INITDB_ROOT_USERNAME=root
+ENV MONGO_INITDB_ROOT_PASSWORD=zXcVbN123!
+ENV MONGO_INITDB_DATABASE=pnf_simulator
+
+COPY ./db /docker-entrypoint-initdb.d
+
+EXPOSE 27017
+
