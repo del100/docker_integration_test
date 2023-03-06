@@ -8,6 +8,7 @@ docker build -t mongo -f ./ves-generator/Dockerfile_mongo ./ves-generator
 docker build -t ves-gen -f ./ves-generator/Dockerfile_gen ./ves-generator
 docker build -t activemq ./broker
 docker build -t ves-listener ./ves-listener
+docker build -t ves-consumer ./ves-consumer
 
 start containers from images
 ----------------------------
@@ -16,6 +17,7 @@ docker run --name mongo mongo
 docker run -d --name activemq -p 8161:8161 activemq
 docker run --name ves-listener --link activemq -p 8080:8080 ves-listener
 docker run -p 5000:5000 --link ves-listener --link mongo --name ves-gen ves-gen
+docker run --name ves-consumer --link activemq ves-consumer
 
 trigger single ves event via the ves generator from postman
 ------------------------------------------------------------
