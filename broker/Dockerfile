@@ -1,4 +1,5 @@
-FROM rmohr/activemq:5.11.0
+FROM vromero/activemq-artemis:2.6.3
 
-# copy a custom activemq.xml file to the container which cotains our queue
-COPY activemq.xml /opt/activemq/conf/activemq.xml
+EXPOSE 8161
+
+COPY broker.xml /var/lib/artemis/etc/broker.xml
