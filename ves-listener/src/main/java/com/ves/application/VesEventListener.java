@@ -1,0 +1,13 @@
+package com.ves.application;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class VesEventListener {
+
+	public static void main(String[] args) {
+		SpringApplication.run(VesEventListener.class, args);
+	}
+
+}

@@ -1,0 +1,32 @@
+# Compiled source files
+**/bin/*
+*.class
+
+# Maven build files
+target
+reports
+
+# Output files
+*.log
+
+
+# Git merge files
+*.orig
+
+# Checkstyle reports
+*.checkstyle
+
+# PMD reports
+*.pmd
+
+
+# Eclipse settings
+*.settings
+*.project
+*.classpath
+
+# IntelliJ settings
+*.idea
+*.iml
+*.ipr
+*.iws

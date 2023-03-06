@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "event": {
+      "type": "object",
+      "properties": {
+        "commonEventHeader": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "type": "string"
+            },
+            "vesEventListenerVersion": {
+              "type": "string"
+            },
+            "domain": {
+              "type": "string"
+            },
+            "eventName": {
+              "type": "string"
+            },
+            "eventId": {
+              "type": "string"
+            },
+            "sequence": {
+              "type": "integer"
+            },
+            "priority": {
+              "type": "string"
+            },
+            "reportingEntityId": {
+              "type": "string"
+            },
+            "reportingEntityName": {
+              "type": "string"
+            },
+            "sourceId": {
+              "type": "string"
+            },
+            "sourceName": {
+              "type": "string"
+            },
+            "nfVendorName": {
+              "type": "string"
+            },
+            "nfNamingCode": {
+              "type": "string"
+            },
+            "nfcNamingCode": {
+              "type": "string"
+            },
+            "startEpochMicrosec": {
+              "type": "string"
+            },
+            "lastEpochMicrosec": {
+              "type": "string"
+            },
+            "timeZoneOffset": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "version",
+            "vesEventListenerVersion",
+            "domain",
+            "eventName",
+            "eventId",
+            "sequence",
+            "priority",
+            "reportingEntityId",
+            "reportingEntityName",
+            "sourceId",
+            "sourceName",
+            "nfVendorName",
+            "nfNamingCode",
+            "nfcNamingCode",
+            "startEpochMicrosec",
+            "lastEpochMicrosec",
+            "timeZoneOffset"
+          ]
+        },
+        "faultFields": {
+          "type": "object",
+          "properties": {
+            "faultFieldsVersion": {
+              "type": "number"
+            },
+            "alarmCondition": {
+              "type": "string"
+            },
+            "eventSourceType": {
+              "type": "string"
+            },
+            "specificProblem": {
+              "type": "string"
+            },
+            "eventSeverity": {
+              "type": "string"
+            },
+            "vfStatus": {
+              "type": "string"
+            },
+            "alarmAdditionalInformation": {
+              "type": "object",
+              "properties": {
+                "PilotNumberPoolSize": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "PilotNumberPoolSize"
+              ]
+            }
+          },
+          "required": [
+            "faultFieldsVersion",
+            "alarmCondition",
+            "eventSourceType",
+            "specificProblem",
+            "eventSeverity",
+            "vfStatus",
+            "alarmAdditionalInformation"
+          ]
+        }
+      },
+      "required": [
+        "commonEventHeader",
+        "faultFields"
+      ]
+    }
+  },
+  "required": [
+    "event"
+  ]
+}
