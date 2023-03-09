@@ -1,3 +1,13 @@
+Overview
+========
+
+Simple integration test suite that illustrates how multiple docker components can be 
+used with a test framework to perform integration tests on a component.
+
+The component under test in this case is a component that listens for VES events,
+parses them, and then sends a message to a JMS queue so interested consumers can
+consume them.
+
 Manual Execution
 ================
 
