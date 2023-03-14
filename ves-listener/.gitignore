@@ -30,3 +30,5 @@ reports
 *.iml
 *.ipr
 *.iws
+/.apt_generated/
+/.apt_generated_tests/

@@ -1,43 +1,39 @@
+
 package com.ves.application.jms;
+
+import java.util.Arrays;
+
+import javax.jms.ConnectionFactory;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import org.springframework.jms.core.JmsTemplate;
-
-import javax.jms.ConnectionFactory;
-import java.util.Arrays;
 
 @Configuration
 public class ActiveMQConfig {
 
     @Value("${active-mq.broker-url}")
     private String brokerUrl;
+    @Value("${active-mq.username}")
+    private String userName;
+    @Value("${active-mq.password}")
+    private String password;
 
     @Bean
-    public ConnectionFactory connectionFactory(){
-        ActiveMQConnectionFactory activeMQConnectionFactory  = new ActiveMQConnectionFactory();
-        activeMQConnectionFactory.setBrokerURL(brokerUrl);
-	activeMQConnectionFactory.setUserName("artemis");
-	activeMQConnectionFactory.setPassword("simetraehcapa");
-        activeMQConnectionFactory.setTrustedPackages(Arrays.asList("com.ves.application.jms.model"));
-        return  activeMQConnectionFactory;
-    }
-
-    @Bean
-    public JmsTemplate jmsTemplate(){
-        JmsTemplate jmsTemplate = new JmsTemplate();
-        jmsTemplate.setConnectionFactory(connectionFactory());
+    public JmsTemplate jmsTemplate() {
+        final JmsTemplate jmsTemplate = new JmsTemplate();
+        jmsTemplate.setConnectionFactory(getConnectionFactory());
         return jmsTemplate;
     }
 
-    @Bean
-    public DefaultJmsListenerContainerFactory jmsListenerContainerFactory(){
-        DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
-        factory.setConnectionFactory(connectionFactory());
-        factory.setErrorHandler(new JmsErrorHandler());
+    private ConnectionFactory getConnectionFactory() {
+        final ActiveMQConnectionFactory factory = new ActiveMQConnectionFactory();
+        factory.setBrokerURL(brokerUrl);
+        factory.setUserName(userName);
+        factory.setPassword(password);
+        factory.setTrustedPackages(Arrays.asList("com.ves.application.jms.model"));
         return factory;
     }
 }

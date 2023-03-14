@@ -1,31 +1,30 @@
-package com.ves.application.jms;
 
-import com.ves.application.jms.model.RandomLongValue;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.jms.annotation.JmsListener;
-import org.springframework.stereotype.Component;
+package com.ves.application.jms;
 
 import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.ObjectMessage;
 
-//@Component
+import org.springframework.jms.annotation.JmsListener;
+
+import com.ves.application.jms.model.RandomLongValue;
+
+import lombok.extern.slf4j.Slf4j;
+
 @Slf4j
 public class JmsConsumer implements MessageListener {
 
-
     @Override
     @JmsListener(destination = "${active-mq.queue}")
-    public void onMessage(Message message) {
-        try{
-            ObjectMessage objectMessage = (ObjectMessage)message;
-            RandomLongValue employee = (RandomLongValue)objectMessage.getObject();
-            //do additional processing
-            log.info("Received Message from Topic: "+ employee.toString());
-        } catch(Exception e) {
-            log.error("Received Exception while processing message: "+ e);
+    public void onMessage(final Message message) {
+        try {
+            final ObjectMessage objectMessage = (ObjectMessage) message;
+            final RandomLongValue value = (RandomLongValue) objectMessage.getObject();
+
+            log.info("Received Message from Topic: " + value.toString());
+        } catch (final Exception e) {
+            log.error("Received Exception while processing message: " + e);
         }
 
     }
 }
-
