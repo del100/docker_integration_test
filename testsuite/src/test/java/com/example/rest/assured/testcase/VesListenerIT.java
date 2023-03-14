@@ -5,6 +5,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import javax.jms.JMSException;
+import javax.jms.Message;
 import javax.jms.ObjectMessage;
 
 import org.junit.Test;
@@ -33,9 +34,9 @@ public class VesListenerIT extends BaseClass {
 
         assertTrue(response.getStatusCode() == 202);
 
-        // THEN - a JMS message is produced by the VES listener
-        final ObjectMessage vesMessage = (ObjectMessage) consumer.receive(1000);
-        assertNotNull("No message received", vesMessage);
-        assertTrue("Received message is not an ObjectMessage", vesMessage instanceof ObjectMessage);
+        // THEN - the listener receives the event and generates a JMS message for it
+        final Message jmsMessage = consumer.receive(1000);
+        assertNotNull("No message received", jmsMessage);
+        assertTrue("Received message is not an ObjectMessage", jmsMessage instanceof ObjectMessage);
     }
 }
