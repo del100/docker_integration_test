@@ -1,5 +1,5 @@
 
-package com.example.rest.assured.testcase.util;
+package com.example.ves.util;
 
 import org.json.JSONObject;
 

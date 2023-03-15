@@ -1,5 +1,5 @@
 
-package com.example.rest.assured.testcase;
+package com.example.ves.tests;
 
 import javax.jms.Connection;
 import javax.jms.Destination;

@@ -1,5 +1,5 @@
 
-package com.example.rest.assured.testcase;
+package com.example.ves.tests;
 
 import static io.restassured.RestAssured.given;
 
@@ -12,7 +12,7 @@ import javax.jms.ObjectMessage;
 
 import org.junit.Test;
 
-import com.example.rest.assured.testcase.util.VesBodyGenerator;
+import com.example.ves.util.VesBodyGenerator;
 
 import io.restassured.http.ContentType;
 
