@@ -66,7 +66,7 @@ public class VesSteps {
     public void triggerVesEvent() {
         response = given()
                 .contentType(ContentType.JSON)
-                .body(VesBodyGenerator.singleEvent())
+                .body(VesBodyGenerator.getEvent())
                 .post(baseUrl);
     }
 

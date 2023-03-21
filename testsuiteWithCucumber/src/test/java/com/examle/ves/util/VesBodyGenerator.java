@@ -6,7 +6,9 @@ import org.json.JSONObject;
 public class VesBodyGenerator {
     private static String VES_LISTENER_URI = "http://ves-listener:8080/eventListener/v1";
 
-    public static String singleEvent() {
+    private VesBodyGenerator() {}
+
+    public static String getEvent() {
         final JSONObject commonEventHeaderObject = new JSONObject();
         commonEventHeaderObject.put("eventId", "#RandomString(20)");
         commonEventHeaderObject.put("sourceName", "PATCHED_sourceName");
